@@ -1,0 +1,236 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arturo Manuel Jr. | IT Support Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileMenuBtn.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.className = 'fas fa-bars';
+                } else {
+                    icon.className = 'fas fa-times';
+                }
+            });
+
+            // Close mobile menu when clicking a link
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuBtn.querySelector('i').className = 'fas fa-bars';
+                });
+            });
+        });
+    </script>
+</head>
+<body class="bg-dark text-white font-sans antialiased">
+
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-dark/80 border-b border-[rgba(0,255,153,0.1)]">
+        <div class="flex justify-between items-center py-5 px-6 md:px-10 max-w-7xl mx-auto">
+            <div class="text-2xl font-bold tracking-tight">Arturo<span class="accent-color">.</span></div>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex gap-8 text-sm font-medium">
+                <a href="#home" class="nav-link hover:accent-color">Home</a>
+                <a href="#skills" class="nav-link hover:accent-color">Skills</a>
+                <a href="#certs" class="nav-link hover:accent-color">Certs</a>
+                <a href="mailto:artzmanueloffic@gmail.com" class="nav-link hover:accent-color">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-2xl focus:outline-none" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Desktop CTA Button -->
+            <a href="mailto:artzmanueloffic@gmail.com" class="hidden md:block btn-primary text-black px-6 py-2.5 rounded-full font-semibold text-sm">Get in touch</a>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div class="md:hidden hidden bg-dark/95 backdrop-blur-md border-t border-[rgba(0,255,153,0.1)]" id="mobile-menu">
+            <div class="px-6 py-4 space-y-4">
+                <a href="#home" class="block py-2 text-gray-300 hover:text-[#00ff99] transition-colors">Home</a>
+                <a href="#skills" class="block py-2 text-gray-300 hover:text-[#00ff99] transition-colors">Skills</a>
+                <a href="#certs" class="block py-2 text-gray-300 hover:text-[#00ff99] transition-colors">Certs</a>
+                <a href="mailto:artzmanueloffic@gmail.com" class="block py-2 text-gray-300 hover:text-[#00ff99] transition-colors">Contact</a>
+                <a href="mailto:artzmanueloffic@gmail.com" class="btn-primary text-black px-6 py-3 rounded-full font-semibold text-sm block text-center mt-6">Get in touch</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="flex flex-col-reverse md:flex-row items-center justify-between px-4 sm:px-6 md:px-10 py-16 sm:py-20 md:py-32 max-w-7xl mx-auto gap-8 md:gap-16">
+        <div class="flex-1 text-center md:text-left">
+            <p class="text-xs sm:text-sm font-semibold tracking-widest text-gray-400 mb-4 uppercase">IT Support Specialist</p>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 leading-tight">
+                Hello, I'm <br><span class="glow-text">Arturo Manuel</span>
+            </h1>
+            <p class="text-gray-300 text-base sm:text-lg max-w-lg mb-8 md:mb-10 leading-relaxed mx-auto md:mx-0">
+                Entry-level IT Support Specialist with expertise in user account management, incident resolution, and Active Directory administration. Passionate about delivering exceptional technical support.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 items-center justify-center md:justify-start">
+                <a href="Resume - Arturo Manuel Jr.pdf" class="btn-secondary text-[#00ff99] px-6 sm:px-8 py-3 rounded-full font-semibold flex items-center gap-2 hover:text-black text-sm sm:text-base">
+                    DOWNLOAD CV <i class="fas fa-download"></i>
+                </a>
+                <div class="flex gap-4 sm:gap-6 text-xl sm:text-2xl">
+                    <a href="https://linkedin.com/in/arturo-manuel-jr-4a05ba320" target="_blank" class="hover:accent-color transition-all duration-300 hover:scale-110" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:artzmanueloffic@gmail.com" class="hover:accent-color transition-all duration-300 hover:scale-110" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex-1 flex justify-center">
+            <div class="image-container">
+                <div class="image-circle">
+                    <div class="image-inner">
+                        <img src="Art.jpg" alt="Arturo Manuel Jr." class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 px-4 sm:px-6 md:px-10 py-12 sm:py-16 max-w-7xl mx-auto">
+        <div class="stats-card">
+            <h3 class="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#00ff99] to-[#00d4ff] bg-clip-text text-transparent mb-2">6 months</h3>
+            <p class="text-gray-400 text-xs sm:text-sm font-medium">Experience</p>
+        </div>
+        <div class="stats-card">
+            <h3 class="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#00ff99] to-[#00d4ff] bg-clip-text text-transparent mb-2">4+</h3>
+            <p class="text-gray-400 text-xs sm:text-sm font-medium">IT Certifications</p>
+        </div>
+        <div class="stats-card">
+            <h3 class="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#00ff99] to-[#00d4ff] bg-clip-text text-transparent mb-2">50+</h3>
+            <p class="text-gray-400 text-xs sm:text-sm font-medium">Tickets Resolved</p>
+        </div>
+        <div class="stats-card">
+            <h3 class="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#00ff99] to-[#00d4ff] bg-clip-text text-transparent mb-2">Cum Laude</h3>
+            <p class="text-gray-400 text-xs sm:text-sm font-medium">Graduate Honors</p>
+        </div>
+    </section>
+
+    <section id="skills" class="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-10 max-w-7xl mx-auto">
+        <div class="mb-8 md:mb-12">
+            <p class="text-sm font-semibold tracking-widest text-[#00ff99] mb-2 uppercase">Expertise</p>
+            <h2 class="section-title text-center">Tool <span class="accent-color">Proficiency</span></h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            <div class="card-dark p-6 sm:p-8 rounded-2xl">
+                <i class="fas fa-users-cog skill-icon accent-color"></i>
+                <h3 class="text-lg sm:text-xl font-bold mb-3">Active Directory</h3>
+                <p class="text-gray-400 text-sm sm:text-base leading-relaxed">Managing user accounts, password resets, and Group Policy implementation in enterprise environments.</p>
+            </div>
+            <div class="card-dark p-6 sm:p-8 rounded-2xl">
+                <i class="fas fa-ticket-alt skill-icon accent-color"></i>
+                <h3 class="text-lg sm:text-xl font-bold mb-3">Service Desk</h3>
+                <p class="text-gray-400 text-sm sm:text-base leading-relaxed">Expertly using Jira for incident logging, tracking, and comprehensive technical documentation.</p>
+            </div>
+            <div class="card-dark p-6 sm:p-8 rounded-2xl">
+                <i class="fas fa-network-wired skill-icon accent-color"></i>
+                <h3 class="text-lg sm:text-xl font-bold mb-3">Networking</h3>
+                <p class="text-gray-400 text-sm sm:text-base leading-relaxed">Configuring IP addressing, DNS, and DHCP in virtualized environments with precision.</p>
+            </div>
+            <div class="card-dark p-6 sm:p-8 rounded-2xl">
+                <i class="fas fa-cloud skill-icon accent-color"></i>
+                <h3 class="text-lg sm:text-xl font-bold mb-3">Azure AD</h3>
+                <p class="text-gray-400 text-sm sm:text-base leading-relaxed">Managing cloud-based identity solutions and hybrid environments seamlessly.</p>
+            </div>
+            <div class="card-dark p-6 sm:p-8 rounded-2xl">
+                <i class="fas fa-shield-alt skill-icon accent-color"></i>
+                <h3 class="text-lg sm:text-xl font-bold mb-3">Security</h3>
+                <p class="text-gray-400 text-sm sm:text-base leading-relaxed">Implementing security protocols and best practices for system protection and data safety.</p>
+            </div>
+            <div class="card-dark p-6 sm:p-8 rounded-2xl">
+                <i class="fas fa-headset skill-icon accent-color"></i>
+                <h3 class="text-lg sm:text-xl font-bold mb-3">Support Skills</h3>
+                <p class="text-gray-400 text-sm sm:text-base leading-relaxed">Excellent communication and troubleshooting abilities for technical support excellence.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="certs" class="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-10 max-w-7xl mx-auto">
+        <div class="mb-8 md:mb-12">
+            <p class="text-sm font-semibold tracking-widest text-[#00ff99] mb-2 uppercase text-center">Achievements</p>
+            <h2 class="section-title text-center">Professional <span class="accent-color">Certifications</span></h2>
+        </div>
+        <div class="space-y-4">
+
+    <a href="https://www.credly.com/badges/de445b4e-6155-4a10-8e20-8098aefe51c8" target="_blank" class="cert-item flex flex-col sm:flex-row sm:items-center justify-between bg-[#252525]/50 backdrop-blur p-4 sm:p-6 rounded-2xl border border-[rgba(0,255,153,0.1)] hover:border-[#00ff99] transition-all block">
+        <div class="mb-2 sm:mb-0">
+            <h4 class="font-bold text-base sm:text-lg mb-1">Cisco: Networking Devices and Initial Configuration</h4>
+            <p class="text-gray-400 text-sm">Cisco Networking Academy | 2026</p>
+        </div>
+        <i class="fas fa-external-link-alt accent-color text-xl sm:text-2xl flex-shrink-0 ml-0 sm:ml-4"></i>
+    </a>
+
+    <a href="https://www.credly.com/badges/e5163843-2333-413d-9193-54ff6cd43346" target="_blank" class="cert-item flex flex-col sm:flex-row sm:items-center justify-between bg-[#252525]/50 backdrop-blur p-4 sm:p-6 rounded-2xl border border-[rgba(0,255,153,0.1)] hover:border-[#00ff99] transition-all block">
+        <div class="mb-2 sm:mb-0">
+            <h4 class="font-bold text-base sm:text-lg mb-1">Cisco: Network Addressing and Basic Troubleshooting</h4>
+            <p class="text-gray-400 text-sm">Cisco Networking Academy | 2026</p>
+        </div>
+        <i class="fas fa-external-link-alt accent-color text-xl sm:text-2xl flex-shrink-0 ml-0 sm:ml-4"></i>
+    </a>
+
+    <a href="https://coursera.org/share/2dffe8b18c3d502303d2a592d4d4ac41" target="_blank" class="cert-item flex flex-col sm:flex-row sm:items-center justify-between bg-[#252525]/50 backdrop-blur p-4 sm:p-6 rounded-2xl border border-[rgba(0,255,153,0.1)] hover:border-[#00ff99] transition-all block">
+        <div class="mb-2 sm:mb-0">
+            <h4 class="font-bold text-base sm:text-lg mb-1">Google IT Support Professional</h4>
+            <p class="text-gray-400 text-sm">Coursera | 2025</p>
+        </div>
+        <i class="fas fa-external-link-alt accent-color text-xl sm:text-2xl flex-shrink-0 ml-0 sm:ml-4"></i>
+    </a>
+
+    <a href="https://www.credly.com/badges/eefeb927-2d13-449e-bc20-6d32dd3d3f5e" target="_blank" class="cert-item flex flex-col sm:flex-row sm:items-center justify-between bg-[#252525]/50 backdrop-blur p-4 sm:p-6 rounded-2xl border border-[rgba(0,255,153,0.1)] hover:border-[#00ff99] transition-all block">
+        <div class="mb-2 sm:mb-0">
+            <h4 class="font-bold text-base sm:text-lg mb-1">Cisco: Network Basics</h4>
+            <p class="text-gray-400 text-sm">Cisco Networking Academy | 2025</p>
+        </div>
+        <i class="fas fa-external-link-alt accent-color text-xl sm:text-2xl flex-shrink-0 ml-0 sm:ml-4"></i>
+    </a>
+
+    <a href="https://www.credly.com/badges/7164ec89-07a5-4fc1-a4d2-482b732339f7" target="_blank" class="cert-item flex flex-col sm:flex-row sm:items-center justify-between bg-[#252525]/50 backdrop-blur p-4 sm:p-6 rounded-2xl border border-[rgba(0,255,153,0.1)] hover:border-[#00ff99] transition-all block">
+        <div class="mb-2 sm:mb-0">
+            <h4 class="font-bold text-base sm:text-lg mb-1">Cisco: Introduction to Cybersecurity</h4>
+            <p class="text-gray-400 text-sm">Cisco Networking Academy | 2025</p>
+        </div>
+        <i class="fas fa-external-link-alt accent-color text-xl sm:text-2xl flex-shrink-0 ml-0 sm:ml-4"></i>
+    </a>
+
+    <div class="cert-item flex flex-col sm:flex-row sm:items-center justify-between bg-[#252525]/50 backdrop-blur p-4 sm:p-6 rounded-2xl border border-[rgba(0,255,153,0.1)]">
+        <div class="mb-2 sm:mb-0">
+            <h4 class="font-bold text-base sm:text-lg mb-1">CompTIA A+ Essentials</h4>
+            <p class="text-gray-400 text-sm">In Progress | Expected 2026</p>
+        </div>
+        <i class="fas fa-hourglass-half accent-color text-xl sm:text-2xl flex-shrink-0 ml-0 sm:ml-4 opacity-50"></i>
+    </div>
+
+    <div class="cert-item flex items-center justify-between bg-[#252525]/50 backdrop-blur p-6 rounded-2xl border border-[rgba(0,255,153,0.1)]">
+        <div>
+            <h4 class="font-bold text-lg mb-1">Microsoft Azure Fundamentals</h4>
+            <p class="text-gray-400 text-sm">In Progress | Expected 2026</p>
+        </div>
+        <i class="fas fa-hourglass-half accent-color text-2xl flex-shrink-0 ml-4 opacity-50"></i>
+    </div>
+</div>
+    </section>
+
+    <footer class="border-t border-[rgba(0,255,153,0.1)] py-8 sm:py-12 text-center text-gray-500">
+        <p class="text-xs sm:text-sm">&copy; 2026 Arturo Manuel Jr.</p>
+    </footer>
+
+</body>
+</html>
